@@ -1,0 +1,19 @@
+ numfmt                               zstdless
+ objcopy                              zstdmt
+root@jenkins:/bin# cd /opt
+root@jenkins:/opt# ls
+artifactory-oss-6.9.6  jfrog-artifactory-oss-6.9.6.zip  telugu
+root@jenkins:/opt# cd artifactory-oss-6.9.6/
+root@jenkins:/opt/artifactory-oss-6.9.6# ls
+Access-Third-Parties-Usage-About-Box.html  COPYING.AFFERO  README.txt  Third-Parties-Usage-About-Box.html  access  backup  bin  data  etc  logs  misc  replicator  run  support  tomcat  webapps
+root@jenkins:/opt/artifactory-oss-6.9.6# cd bin
+root@jenkins:/opt/artifactory-oss-6.9.6/bin# ls
+artifactory-service.exe  artifactory.default  artifactoryManage.sh  configure.mysql.sh  installService.sh     uninstallService.sh
+artifactory.bat          artifactory.sh       artifactoryctl        installService.bat  uninstallService.bat
+root@jenkins:/opt/artifactory-oss-6.9.6/bin# ./artifactory.sh
+Found java executable in JAVA_HOME (/usr/lib/jvm/java-11-openjdk-amd64/)
+Using CATALINA_BASE:   /opt/artifactory-oss-6.9.6/tomcat
+Using CATALINA_HOME:   /opt/artifactory-oss-6.9.6/tomcat
+Using CATALINA_TMPDIR: /opt/artifactory-oss-6.9.6/tomcat/temp
+Using JRE_HOME:        /usr/lib/jvm/java-11-openjdk-amd64/
+Using CLASSPATH:       /opt/ar

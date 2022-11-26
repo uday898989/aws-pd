@@ -1,0 +1,122 @@
+#!/bin/bash
+
+
+# Setup Hostname
+
+sudo hostnamectl set-hostname "tomcat.cloudbinary.io"
+
+
+# Update the hostname part of Host File
+
+echo "`hostname -I | awk '{ print $1 }'` `hostname`" >> /etc/hosts
+
+
+# Update Ubuntu Repository
+
+sudo apt update
+
+
+# Download, & Install Utility Softwares
+
+sudo apt install git wget unzip curl tree -y
+
+
+# Download, Install Java 11
+
+sudo apt install openjdk-11-jdk -y
+
+
+# Backup the Environment File
+
+sudo cp -pvr /etc/environment "/etc/environment_$(date +%F_%R)"
+
+
+# Create Environment Variables
+
+echo "JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64/" >> /etc/environment
+
+
+# Compile the Configuration
+
+source /etc/environment
+
+
+# Go to /opt directory to download Apache Tomcat
+
+cd /opt/
+
+
+# Download Tomcat
+
+sudo wget https://downloads.apache.org/tomcat/tomcat-8/v8.5.83/bin/apache-tomcat-8.5.83.tar.gz
+
+
+# Unzip or Untar
+
+sudo tar xvzf apache-tomcat-8.5.83.tar.gz
+
+
+# Rename the folder
+
+sudo mv apache-tomcat-8.5.83 tomcat
+
+
+# Navigate to the folder
+
+cd /opt/tomcat/
+
+
+# Usig Process Status Command
+
+# ps -aux | grep tomcat
+
+
+Agenda :
+
+
+
+Download, Install & Configure :
+
+- Application Servers :
+
+- Apache Tomcat
+
+- OS : Linux : Ubuntu : 22.04
+
+
+
+Type Of Installation :
+
+
+Binary :
+
+
+STEP-1 : Go to Apache Tomcat :
+
+- Documentation
+
+- Downloads :
+
+- Hardware
+
+- Software : java
+
+- Process
+
+
+STEP-2 : Launch a Linux Machine
+
+
+STEP-3 : Utility Softwares : git curl wget unzip tree
+
+
+STEP-4 : Software : Java
+
+
+STEP-5 : Enable Tomcat Pages across Global
+
+
+STEP-6 : User, Password, Permissions
+
+
+STEP-7 : Access Tomcat & Deploy Java Application

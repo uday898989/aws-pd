@@ -1,0 +1,46 @@
+. What is Git?
+2. What do you understand by the term ‘Version Control System’?
+3. What is GitHub?
+4. Mention some popular Git hosting services.
+5. What benefits come with using GIT?
+6. What’s the difference between Git and Github?
+7.What is a Git repository?
+8. How can you initialise a repository in Git?
+9. How is Git different from Subversion (SVN)?
+10. Name a few Git commands with their function.
+11. What are the advantages of using Git?
+12. What language is used in Git?
+13. What is the correct syntax to add a message to a commit?
+14. What does git pull origin master do?
+15.  What does the git push command do?
+16. Difference between git fetch and git pull.
+17. What do you understand about the Git merge conflict?
+18. How do you resolve conflicts in Git?
+19. What is the functionality of git ls-tree?
+20. What is the process t
+23. What does the git reset --mixed and git merge --abort commands do?
+24. What do you understand about the Staging area in Git?
+25. What is the use of the git config command?
+26. What is Git Bisect and how do you use it?
+27. If you recover a deleted branch, what work is restored?
+28. What is SubGit and why is it used?29. What exactly is tagging in Git?
+30. What exactly is forking in Git?
+31. How to change any older commit messages?
+32. How to handle huge binary files in Git?
+33. Name a few GIT tools.
+34. Will you make a new commit or amend an existing one?
+35. What do you mean by branching strategy?
+36. Difference between head, working tree, and index.
+37. What does the commit object contain?
+o revert a commit that has already been pushed andmade public
+?21. What does git clone do?22. What is Git stash?
+38. What is the Gitflow workflow?
+39. Mention benefits of forking workflow.
+40. What do you mean by git instaweb
+?41. Is there a git GUI client available for Linux?
+42. How is a bare repository different from the standard way of initialising aGit repository?
+43. What is the functionality of git clean command?
+44. How do you find a list of files that have been changed in a particularcommit?
+45. Which command is used to create an empty Git repository?
+THANK YOU
+

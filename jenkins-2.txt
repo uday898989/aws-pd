@@ -1,0 +1,141 @@
+
+#!/bin/bash
+
+
+# Setup Hostname
+
+sudo hostnamectl set-hostname "jenkins.cloudbinary.io"
+
+
+# Update the hostname part of Host File
+
+echo "`hostname -I | awk '{ print $1 }'` `hostname`" >> /etc/hosts
+
+
+# Update Ubuntu Repository
+
+apt update
+
+
+# Download, & Install Utility Softwares
+
+apt install git wget unzip curl tree -y
+
+
+# Download, Install Java 11
+
+sudo apt install openjdk-11-jdk -y
+
+
+# Backup the Environment File
+
+sudo cp -pvr /etc/environment "/etc/environment_$(date +%F_%R)"
+
+
+# Create Environment Variables
+
+echo "JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64/" >> /etc/environment
+
+
+# Compile the Configuration
+
+source /etc/environment
+
+
+# Download, Install Maven
+
+sudo apt-get install maven -y
+
+
+# Backup the Environment File
+
+sudo cp -pvr /etc/environment "/etc/environment_$(date +%F_%R)"
+
+
+# Create Environment Variables
+
+echo "MAVEN_HOME=/usr/share/maven" >> /etc/environment
+
+
+# Compile the Configuration
+
+source /etc/environment
+
+
+# Go to /opt directory to download Apache Tomcat
+
+# cd /opt/
+
+
+# Add Jenkins Repository
+
+sudo wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
+
+
+# Adding the Jenkins Remote Repository URL in Ubuntu Local Repository Configuration file
+
+sudo sh -c 'echo deb https://pkg.jenkins.io/debian-stable binary/' > /etc/apt/sources.list.d/jenkins.list
+
+
+# Update the Repository on Ubuntu 18.04
+
+sudo apt update
+
+
+# Download, Install Jenkins
+
+sudo apt install jenkins -y
+
+
+# Verify the jenkins service
+
+# sudo systemctl status jenkins.service
+
+
+# Enable Jenkins Daemon/Service at Boot
+
+# sudo systemctl enable jenkins.service
+
+
+# Restart the Jenkins Daemon/Service
+
+# sudo systemctl restart jenkins.service
+
+
+# Usig Process Status Command
+
+# ps -aux | grep jenkins
+
+#: to acess the jenkins copy the ip adress from ec2. 
+then search in browser and change the security port to "8080"
+
+# to get new password to genkins 
+
+$: ls -lrt /var/lib/jenkins/secrets/initialAdminPassword
+
+# then give the command 
+
+ $: cat /var/lib/jenkins/secrets/initialAdminPassword
+
+# paste the security code in jenkins.
+
+
+# Github Java Source Code :
+
+# https://github.com/kesavkummari/webapp-java-maven.git
+
+          ***AFTER OPEN THE JENKINS PAGE***
+ 
+1: Dashboard | Manage jenkins | Global tool configaration | JDK [ADD jdk | java_home 
+ 
+To get the java code 
+
+# echo $java home 
+ 
+| then copy the path and paste in java-home | Apply | save |.....
+
+*** now if we start any new jon in jenkins we do that with help of maven software 
+so we install it with help of " MANAGE PLUGINS "***
+
+MANAGE PLuGINS | Available | serch for Maven intgration |[scroll down and install without restart] |
+

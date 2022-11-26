@@ -1,0 +1,7 @@
+in master creating key-gen
+
+copy the pub key in nodes....
+
+we need pri ip under the nodes ( how we get this pri ip and ,,,,, from aws console we get it)
+
+how we need we get name of nodes we created......

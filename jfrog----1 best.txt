@@ -1,0 +1,49 @@
+# https://jfrog.com/artifactory/install/
+https://www.digitalocean.com/community/tutorials/how-to-install-jenkins-on-ubuntu-22-04
+
+Sudo apt update
+
+
+# Setup Hostname
+hostnamectl set-hostname "jfrog.cloudbinary.io"
+
+# Configure Hostname unto hosts file
+echo "`hostname -I | awk '{ print $1}'` `hostname`" >> /etc/hosts
+
+# Update the Repository on Ubuntu 18.04
+sudo apt-get update
+
+# Install required utility softwares
+sudo apt-get install vim curl elinks unzip wget tree git -y
+
+# Download, Install Java 11
+sudo apt-get install openjdk-11-jdk -y
+
+# Backup the Environment File
+sudo cp -pvr /etc/environment "/etc/environment_$(date +%F_%R)"
+
+# Create Environment Variables
+echo "JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64/" >> /etc/environment
+
+# Compile the Configuration
+source /etc/environment
+
+# Common Software Properties
+sudo apt install software-properties-common -y
+
+
+1.	Login to instance as a root user and install Java
+ yum install java-1.8* -y 
+
+2.	cd /opt 
+wget https://jfrog.bintray.com/artifactory/jfrog-artifactory-oss-6.9.6.zip
+3.	extract artifactory tar.gz file
+unzip jfrog-artifactory-oss-6.9.6.zip
+4.	Go inside to bin directory and start the services
+5.	cd /opt/jfrog-artifactory-oss-6.9.6/bin
+./artifactory.sh start
+6.	access artifactory from browser
+http://<PUBLIC_IP_Address>:8081 
+7.	Provide credentials
+8.	username: admin
+password: passwrod 
